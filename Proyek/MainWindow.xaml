@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:Proyek"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid HorizontalAlignment="Left" Margin="0,0,-0.4,0" Width="794" Height="420" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush ImageSource="LoginBackground.png"/>
+        </Grid.Background>
+        <Label Content="Connection Setting" HorizontalAlignment="Left" Margin="297,35,0,0" VerticalAlignment="Top" Height="48" Width="221" FontSize="24" Foreground="White"/>
+        <Label Content="Data Source" HorizontalAlignment="Left" Margin="210,123,0,0" VerticalAlignment="Top" Height="31" Width="87" FontSize="14" Foreground="White"/>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="210,171,0,0" VerticalAlignment="Top" Height="33" Width="87" FontSize="14" Foreground="White"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="210,219,0,0" VerticalAlignment="Top" Height="33" Width="87" FontSize="14" Foreground="White"/>
+        <TextBox x:Name="sourceTB" HorizontalAlignment="Left" Height="23" Margin="338,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="UsernameTB" HorizontalAlignment="Left" Height="23" Margin="338,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="PassTB" HorizontalAlignment="Left" Height="23" Margin="338,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="216,292,0,0" VerticalAlignment="Top" Width="362"/>
+
     </Grid>
 </Window>
