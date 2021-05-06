@@ -30,3 +30,5 @@ C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Pr
 C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Proyek.csproj.CopyComplete
 C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Proyek.exe
 C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Proyek.pdb
+C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Menu.g.cs
+C:\Users\Tan\Desktop\Semester 4\Proyek PCS\Proyek\Proyek-PCS\Proyek\obj\Debug\Menu.baml

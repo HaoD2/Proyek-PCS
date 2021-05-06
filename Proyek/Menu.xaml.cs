@@ -10,26 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Proyek
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Menu.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Menu : Window
     {
-        public MainWindow()
+        public Menu()
         {
             InitializeComponent();
-        }
-
-        private void SubmitBTN_Click(object sender, RoutedEventArgs e)
-        {
-            Menu m = new Menu();
-            m.Show();
-            this.Close();
         }
     }
 }
