@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("loginbackground.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("homepagemaster.jpg")]
 
 

@@ -1,0 +1,41 @@
+﻿<Window x:Class="Proyek.MasterMahasiswa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyek"
+        mc:Ignorable="d"
+        Title="Master Siswa" Height="540" Width="920">
+    <Grid Margin="0,0,-78.4,-76.6">
+        <Grid.Background>
+            <ImageBrush ImageSource="HomepageMaster.jpg"/>
+        </Grid.Background>
+        <DataGrid HorizontalAlignment="Left" Height="218" VerticalAlignment="Top" Width="992"/>
+        <Label Content="Nama " HorizontalAlignment="Left" Margin="38,285,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="NISN " HorizontalAlignment="Left" Margin="38,322,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="NIS " HorizontalAlignment="Left" Margin="38,359,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.443,1.588"/>
+        <Label Content="Jenis kelamin  " HorizontalAlignment="Left" Margin="38,396,0,0" VerticalAlignment="Top" FontSize="16" Width="132"/>
+        <Label Content="Nama Wali " HorizontalAlignment="Left" Margin="409,284,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Alamat " HorizontalAlignment="Left" Margin="409,321,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="No telp " HorizontalAlignment="Left" Margin="409,358,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Email " HorizontalAlignment="Left" Margin="409,395,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <Label Content="Jurusan " HorizontalAlignment="Left" Margin="38,430,0,0" VerticalAlignment="Top" FontSize="16" Width="132"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,331,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="152,367,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="559,293,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="559,330,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="559,368,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" TextChanged="TextBox_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="559,404,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="191" TextChanged="TextBox_TextChanged"/>
+        <RadioButton Content="Pria" HorizontalAlignment="Left" Margin="152,405,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.841,0.27" Checked="RadioButton_Checked" FontSize="16"/>
+        <RadioButton Content="Wanita" HorizontalAlignment="Left" Margin="225,405,0,0" VerticalAlignment="Top" Height="23" RenderTransformOrigin="0.841,0.27" Checked="RadioButton_Checked" FontSize="16"/>
+        <RadioButton Content="IPA" HorizontalAlignment="Left" Margin="152,441,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="-0.752,0.351"/>
+        <RadioButton Content="IPS" HorizontalAlignment="Left" Margin="225,441,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.454,1.75" FontSize="16"/>
+        <GroupBox Header="Biodata" HorizontalAlignment="Left" Height="369" Margin="0,218,0,0" VerticalAlignment="Top" Width="799"/>
+        <Button Content="INSERT" HorizontalAlignment="Left" Margin="844,230,0,0" VerticalAlignment="Top" Width="109" Height="92" FontSize="20"/>
+        <Button Content="UPDATE" HorizontalAlignment="Left" Margin="844,350,0,0" VerticalAlignment="Top" Width="109" Height="92" FontSize="20"/>
+        <Button Content="DELETE" HorizontalAlignment="Left" Margin="844,471,0,0" VerticalAlignment="Top" Width="109" Height="92" FontSize="20"/>
+        <Button Content="CLEAR" HorizontalAlignment="Left" Margin="338,512,0,0" VerticalAlignment="Top" Width="135" Height="51" RenderTransformOrigin="0.165,0.476" FontSize="20"/>
+
+    </Grid>
+</Window>
