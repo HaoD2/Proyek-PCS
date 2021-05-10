@@ -45,5 +45,13 @@ namespace Proyek
             dgSiswa.ItemsSource = dataSiswa.DefaultView;
             conn.Close();
         }
+
+        private void insBtn_Click(object sender, RoutedEventArgs e)
+        {
+            string namaUser = namaTB.Text.ToString();
+            string nisn = nisnTb.Text.ToString();
+            string nis = nisTb.Text.ToString();
+            string jk = "";
+        }
     }
 }
