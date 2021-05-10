@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Oracle.DataAccess.Client;
+using System.Data;
 
 namespace Proyek
 {
@@ -19,9 +21,29 @@ namespace Proyek
     /// </summary>
     public partial class MasterMahasiswa : Window
     {
+        OracleConnection conn;
+        DataTable dataSiswa;
+        OracleDataAdapter da;
         public MasterMahasiswa()
         {
             InitializeComponent();
+            conn = MainWindow.conn;
+            loadData();
+        }
+
+        private void loadData()
+        {
+            da = new OracleDataAdapter();
+            dataSiswa = new DataTable();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            conn.Open();
+            cmd.CommandText = "SELECT NIS, NAMA AS \"Nama Siswa\", DECODE(JENIS_KELAMIN, 'L', 'Laki-laki', 'P', 'Perempuan') AS \"Jenis Kelamin\", TANGGAL_LAHIR AS \"Tgl Lahir\", DECODE(ID_JURUSAN, '1', 'IPA', '2', 'IPS') AS \"Jurusan\" FROM SISWA";
+            cmd.ExecuteReader();
+            da.SelectCommand = cmd;
+            da.Fill(dataSiswa);
+            dgSiswa.ItemsSource = dataSiswa.DefaultView;
+            conn.Close();
         }
     }
 }

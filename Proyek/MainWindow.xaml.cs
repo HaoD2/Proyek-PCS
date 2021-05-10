@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Oracle.DataAccess.Client;
+using System.Data;
+
 
 namespace Proyek
 {
@@ -20,6 +23,8 @@ namespace Proyek
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static OracleConnection conn;
+        String source, userId, pass;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,9 +32,23 @@ namespace Proyek
 
         private void SubmitBTN_Click(object sender, RoutedEventArgs e)
         {
-            Menu m = new Menu();
-            m.Show();
-            this.Close();
+            source = sourceTB.Text;
+            userId = UsernameTB.Text;
+            pass = PassTB.Text;
+            try
+            {
+                conn = new OracleConnection("Data Source = " + source + "; User ID = " + userId + "; password = " + pass);
+                conn.Open();
+                conn.Close();
+                MasterMahasiswa masterSiswa = new MasterMahasiswa();
+                masterSiswa.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
         }
     }
 }

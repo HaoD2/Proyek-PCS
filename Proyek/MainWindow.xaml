@@ -14,9 +14,9 @@
         <Label Content="Data Source" HorizontalAlignment="Left" Margin="210,123,0,0" VerticalAlignment="Top" Height="34" Width="89" FontSize="14" Foreground="White"/>
         <Label Content="Username" HorizontalAlignment="Left" Margin="210,176,0,0" VerticalAlignment="Top" Height="37" Width="89" FontSize="14" Foreground="White"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="210,230,0,0" VerticalAlignment="Top" Height="36" Width="89" FontSize="14" Foreground="White"/>
-        <TextBox x:Name="sourceTB" HorizontalAlignment="Left" Height="25" Margin="342,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="UsernameTB" HorizontalAlignment="Left" Height="25" Margin="342,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
-        <TextBox x:Name="PassTB" HorizontalAlignment="Left" Height="26" Margin="342,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123"/>
+        <TextBox x:Name="sourceTB" HorizontalAlignment="Left" Height="25" Margin="342,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="orcl"/>
+        <TextBox x:Name="UsernameTB" HorizontalAlignment="Left" Height="25" Margin="342,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="proyek"/>
+        <TextBox x:Name="PassTB" HorizontalAlignment="Left" Height="26" Margin="342,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" Text="proyek"/>
         <Button x:Name="SubmitBTN" Content="SUBMIT" HorizontalAlignment="Left" Margin="210,292,0,0" VerticalAlignment="Top" Width="372" Click="SubmitBTN_Click" Height="21"/>
 
     </Grid>
