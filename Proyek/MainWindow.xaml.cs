@@ -40,9 +40,9 @@ namespace Proyek
                 conn = new OracleConnection("Data Source = " + source + "; User ID = " + userId + "; password = " + pass);
                 conn.Open();
                 conn.Close();
-                MasterMahasiswa masterSiswa = new MasterMahasiswa();
-                masterSiswa.Show();
+                LoginForm lf = new LoginForm();
                 this.Close();
+                lf.Show();
             }
             catch (Exception ex)
             {
