@@ -12,7 +12,7 @@ namespace Proyek
         string nis;
         string nama;
         string jenis_kelamin;
-        string tanggal_lahir;
+        DateTime tanggal_lahir;
         string password;
         string alamat;
         string notelp;
@@ -20,7 +20,7 @@ namespace Proyek
         string nama_ortu;
         int idjur;
 
-        public ListSiswa(string nisn, string nis, string nama, string jenis_kelamin, string tanggal_lahir, string password, string alamat, string notelp, string email, string nama_ortu, int idjur)
+        public ListSiswa(string nisn, string nis, string nama, string jenis_kelamin, DateTime tanggal_lahir, string password, string alamat, string notelp, string email, string nama_ortu, int idjur)
         {
             this.nisn = nisn;
             this.nis = nis;
@@ -39,7 +39,7 @@ namespace Proyek
         public string Nis { get => nis; set => nis = value; }
         public string Nama { get => nama; set => nama = value; }
         public string Jenis_kelamin { get => jenis_kelamin; set => jenis_kelamin = value; }
-        public string Tanggal_lahir { get => tanggal_lahir; set => tanggal_lahir = value; }
+        public DateTime Tanggal_lahir { get => tanggal_lahir; set => tanggal_lahir = value; }
         public string Password { get => password; set => password = value; }
         public string Alamat { get => alamat; set => alamat = value; }
         public string Notelp { get => notelp; set => notelp = value; }
