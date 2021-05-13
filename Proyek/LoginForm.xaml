@@ -8,10 +8,10 @@
         Title="LoginForm" Height="357" Width="455">
     <Grid Margin="0,0,2,-4">
 
-        <TextBox x:Name="tbNISP" HorizontalAlignment="Left" Height="23" Margin="179,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <TextBox x:Name="tbusername" HorizontalAlignment="Left" Height="23" Margin="179,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
         <TextBox x:Name="tbpassword" HorizontalAlignment="Left" Height="23" Margin="179,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
-        <Label Content="NISN/ID: " HorizontalAlignment="Left" Margin="110,78,0,0" VerticalAlignment="Top" Foreground="Black"/>
-        <Label Content="Password :" HorizontalAlignment="Left" Margin="105,117,0,0" VerticalAlignment="Top" Foreground="Black"/>
+        <Label Content="Username:" HorizontalAlignment="Left" Margin="105,78,0,0" VerticalAlignment="Top" Foreground="Black"/>
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="105,117,0,0" VerticalAlignment="Top" Foreground="Black"/>
         <Button x:Name="btnlogin" Content="Login" HorizontalAlignment="Left" Margin="105,155,0,0" VerticalAlignment="Top" Width="229" Height="31" Click="btnlogin_Click"/>
     </Grid>
 </Window>

@@ -22,33 +22,19 @@ namespace Proyek
     {
         public static string nmuser;
         public static string current_idus;
-        public static string statuslog = "";
         OracleConnection conn;
-        List<ListSiswa> listsiswa = new List<ListSiswa>();
-        List<ListGuru> listguru = new List<ListGuru>();
+        Boolean login = false;
+        List<user> us = new List<user>();
 
-        private void addsiswa()
+        private void adddata()
         {
-            OracleCommand cmd = new OracleCommand($"select * from SISWA", conn);
+            OracleCommand cmd = new OracleCommand($"select * from CUSTOMER", conn);
             conn.Close();
             conn.Open();
             OracleDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                listsiswa.Add(new ListSiswa(reader.GetString(0),reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetDateTime(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(8), reader.GetString(9), Convert.ToInt32(reader[10])));
-            }
-            conn.Close();
-        }
-
-        private void addguru()
-        {
-            OracleCommand cmd = new OracleCommand($"select * from GURU", conn);
-            conn.Close();
-            conn.Open();
-            OracleDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                listguru.Add(new ListGuru(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7)));
+                us.Add(new user(Convert.ToInt32(reader[0]),reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),reader.GetString(5),Convert.ToInt32(reader[6])));
             }
             conn.Close();
         }
@@ -57,53 +43,35 @@ namespace Proyek
         {
             InitializeComponent();
             conn = MainWindow.conn;
-            addsiswa();
-            addguru();
+            adddata();
         }
 
         private void btnlogin_Click(object sender, RoutedEventArgs e)
         {
-            if (tbNISP.Text.ToUpper() == "ADMIN" && tbpassword.Text.ToUpper() == "ADMIN")
+            if (tbusername.Text.ToUpper() == "ADMIN" && tbpassword.Text.ToUpper() == "ADMIN")
             {
-                MasterMahasiswa mm = new MasterMahasiswa();
-                this.Close();
-                mm.Show();
+                MessageBox.Show("Berhasil login admin");
             }
             else
             {
-                for (int i = 0; i < listsiswa.Count; i++)
+                for (int i = 0; i < us.Count; i++)
                 {
-                    if (tbNISP.Text.ToUpper() == listsiswa[i].Nisn.ToUpper())
+                    if(tbusername.Text.ToUpper() == us[i].Username.ToUpper())
                     {
-                        if (tbpassword.Text.ToUpper() == listsiswa[i].Password.ToUpper())
-                        {
-                            nmuser = listsiswa[i].Nama;
-                            current_idus = listsiswa[i].Nisn;
-                            statuslog = "siswa";
-                        }
+                        if (tbpassword.Text.ToUpper() == us[i].Password.ToUpper())
+                            login = true;
+                        else
+                            MessageBox.Show("password salah");
                     }
                 }
 
-                for (int i = 0; i < listguru.Count; i++)
+                if(login)
                 {
-                    if (tbNISP.Text.ToUpper() == listguru[i].Kode_guru.ToUpper())
-                    {
-                        if (tbpassword.Text.ToUpper() == listguru[i].Password.ToUpper())
-                        {
-                            nmuser = listguru[i].Nama;
-                            current_idus = listguru[i].Kode_guru;
-                            statuslog = "guru";
-                        }
-                    }
-                }
-
-                if(statuslog!="")
-                {
-                    MessageBox.Show("login sebagai " + statuslog + " bernama :" + nmuser);
+                    MessageBox.Show("Berhasil login customer");
                 }
                 else
                 {
-                    MessageBox.Show("login gagal");
+                    MessageBox.Show("Username tidak ada / Username salah");
                 }
             }
         }

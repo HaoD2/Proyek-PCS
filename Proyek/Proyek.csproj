@@ -66,8 +66,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ListGuru.cs" />
-    <Compile Include="ListSiswa.cs" />
     <Compile Include="LoginForm.xaml.cs">
       <DependentUpon>LoginForm.xaml</DependentUpon>
     </Compile>
@@ -83,6 +81,7 @@
       <DependentUpon>Report.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="user.cs" />
     <Page Include="LoginForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
